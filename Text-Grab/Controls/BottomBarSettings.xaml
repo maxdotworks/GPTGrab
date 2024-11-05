@@ -1,0 +1,254 @@
+<ui:FluentWindow
+    x:Class="Text_Grab.Controls.BottomBarSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Text_Grab.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Bottom Bar Settings"
+    Width="950"
+    Height="500"
+    Background="{DynamicResource ApplicationBackgroundBrush}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    WindowStartupLocation="CenterOwner"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ui:ImageIcon x:Key="TextGrabIcon" Source="/Text-Grab;component/Images/TealSelect40.png" />
+
+        <!--<Style x:Key="headerStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Foreground" Value="AliceBlue" />
+            <Setter Property="FontSize" Value="24" />
+        </Style>-->
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <ui:TitleBar
+            Title="Bottom Bar Settings"
+            Grid.ColumnSpan="3"
+            Height="32"
+            Margin="2,2,2,0"
+            Padding="8,2"
+            Icon="{StaticResource TextGrabIcon}" />
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            Padding="52,0"
+            FontSize="16"
+            Text="Is Icon" />
+
+        <Border
+            Grid.Row="1"
+            Margin="8,24,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="{ui:ThemeResource CardBackgroundFillColorSecondaryBrush}"
+            CornerRadius="8">
+            <ui:ListView
+                x:Name="LeftListBox"
+                d:ItemsSource="{d:SampleData ItemCount=5}"
+                ItemContainerStyle="{StaticResource GridViewListItem}"
+                ItemsSource="{Binding ButtonsInLeftList}"
+                ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListView.View>
+                    <!--  ColumnHeaderContainerStyle="{StaticResource headerStyle}"  -->
+                    <GridView>
+                        <GridViewColumn Width="46">
+                            <GridViewColumnHeader Content="Icon" />
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Viewbox Height="32">
+                                        <ui:SymbolIcon
+                                            Grid.Column="0"
+                                            Margin="0,0,8,0"
+                                            d:Symbol="Diamond24"
+                                            FontSize="24"
+                                            Symbol="{Binding Path=SymbolIcon, Mode=TwoWay}" />
+                                    </Viewbox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="72" Header="Icon Mode">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ui:ToggleSwitch
+                                        Grid.Column="2"
+                                        Height="32"
+                                        HorizontalAlignment="Center"
+                                        IsChecked="{Binding IsSymbol}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="252" Header="Button Text">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="0,4,8,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="16"
+                                        Style="{StaticResource TextBodyNormal}"
+                                        Text="{Binding ButtonText}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ui:ListView>
+        </Border>
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Orientation="Vertical">
+            <local:CollapsibleButton
+                x:Name="MoveRightButton"
+                ButtonSymbol="CaretRight24"
+                ButtonText="Add"
+                Click="MoveRightButton_Click" />
+            <local:CollapsibleButton
+                x:Name="MoveLeftButton"
+                ButtonSymbol="CaretLeft24"
+                ButtonText="Remove"
+                Click="MoveLeftButton_Click" />
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <local:CollapsibleButton
+                    x:Name="MoveUpButton"
+                    ButtonSymbol="CaretUp24"
+                    ButtonText="Move Up"
+                    Click="MoveUpButton_Click" />
+                <local:CollapsibleButton
+                    x:Name="MoveDownButton"
+                    ButtonSymbol="CaretDown24"
+                    ButtonText="Move Down"
+                    Click="MoveDownButton_Click" />
+            </StackPanel>
+            <TextBlock
+                Grid.Row="1"
+                Padding="0,0,300,0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Text="Is Icon" />
+            <Border
+                Grid.Row="2"
+                Margin="8"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="{ui:ThemeResource CardBackgroundFillColorSecondaryBrush}"
+                CornerRadius="8">
+                <ui:ListView
+                    x:Name="RightListBox"
+                    d:ItemsSource="{d:SampleData ItemCount=1}"
+                    ItemContainerStyle="{StaticResource GridViewListItem}"
+                    ItemsSource="{Binding ButtonsInRightList}"
+                    ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="46" Header="Icon">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Viewbox Height="32">
+                                            <ui:SymbolIcon
+                                                Grid.Column="0"
+                                                Margin="0,0,8,0"
+                                                d:Symbol="Diamond24"
+                                                FontSize="24"
+                                                Symbol="{Binding Path=SymbolIcon, Mode=TwoWay}" />
+                                        </Viewbox>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="72" Header="Icon Mode">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ui:ToggleSwitch
+                                            Grid.Column="2"
+                                            Height="32"
+                                            HorizontalAlignment="Center"
+                                            IsChecked="{Binding IsSymbol}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="252" Header="Button Text">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock
+                                            Grid.Column="1"
+                                            Margin="0,4,8,0"
+                                            FontSize="16"
+                                            Style="{StaticResource TextBodyNormal}"
+                                            Text="{Binding ButtonText}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ui:ListView>
+            </Border>
+
+            <StackPanel
+                Grid.Row="3"
+                Margin="0,26,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Orientation="Vertical">
+                <ui:ToggleSwitch
+                    x:Name="ShowCursorTextCheckBox"
+                    Margin="0,0,20,0"
+                    VerticalContentAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Style="{StaticResource TextBodyNormal}">
+                        Show Cursor/Selection Text
+                    </TextBlock>
+                </ui:ToggleSwitch>
+                <ui:ToggleSwitch
+                    x:Name="ShowScrollbarCheckBox"
+                    Margin="0,12,0,0"
+                    VerticalContentAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Style="{StaticResource TextBodyNormal}">
+                        Show Scrollbar
+                    </TextBlock>
+                </ui:ToggleSwitch>
+
+            </StackPanel>
+        </Grid>
+
+        <StackPanel
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            Margin="0,12,0,6"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <local:CollapsibleButton
+                x:Name="CloseBTN"
+                ButtonSymbol="Dismiss24"
+                ButtonText="Cancel"
+                Click="CloseBTN_Click" />
+            <local:CollapsibleButton
+                x:Name="SaveBTN"
+                Background="DarkGreen"
+                ButtonSymbol="Save24"
+                ButtonText="Save and Close"
+                Click="SaveBTN_Click" />
+        </StackPanel>
+    </Grid>
+</ui:FluentWindow>

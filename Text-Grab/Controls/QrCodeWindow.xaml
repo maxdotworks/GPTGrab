@@ -1,0 +1,97 @@
+﻿<ui:FluentWindow
+    x:Class="Text_Grab.Controls.QrCodeWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Text_Grab.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Text Grab QR Code"
+    Width="400"
+    Height="600"
+    Closing="FluentWindow_Closing"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ui:ImageIcon x:Key="TextGrabIcon" Source="/Text-Grab;component/Images/TealSelect40.png" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            x:Name="UiTitleBar"
+            Title="QR Code"
+            Height="32"
+            Margin="2,2,2,0"
+            Padding="8,2"
+            Icon="{StaticResource TextGrabIcon}" />
+        <TextBox
+            x:Name="QrCodeTextBox"
+            Grid.Row="1"
+            Margin="12,0"
+            TextChanged="QrCodeTextBox_TextChanged" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <local:CollapsibleButton
+                x:Name="SaveButton"
+                Margin="12,0,0,0"
+                ButtonSymbol="Save24"
+                ButtonText="PNG..."
+                Click="SaveButton_Click" />
+            <local:CollapsibleButton
+                x:Name="SvgButton"
+                ButtonSymbol="Save24"
+                ButtonText="Svg..."
+                Click="SvgButton_Click" />
+            <local:CollapsibleButton
+                x:Name="CopyButton"
+                ButtonSymbol="ImageCopy24"
+                ButtonText="Copy PNG to clipboard"
+                Click="CopyButton_Click" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="3"
+            Height="36"
+            Orientation="Horizontal">
+            <TextBlock
+                Margin="12,0"
+                VerticalAlignment="Center"
+                Text="Error Correction Level" />
+            <ComboBox
+                x:Name="ErrorCorrectionComboBox"
+                VerticalAlignment="Center"
+                Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                SelectionChanged="ErrorCorrectionComboBox_SelectionChanged">
+                <ComboBoxItem
+                    Content="Low, up to 7%"
+                    IsSelected="True"
+                    Tag="L" />
+                <ComboBoxItem Content="Medium, up to 15%" Tag="M" />
+                <ComboBoxItem Content="Quality, up to 25%" Tag="Q" />
+                <ComboBoxItem Content="High, up to 30%" Tag="H" />
+            </ComboBox>
+        </StackPanel>
+        <TextBlock
+            x:Name="LengthErrorTextBlock"
+            Grid.Row="4"
+            Padding="20,4"
+            HorizontalAlignment="Center"
+            d:Visibility="Visible"
+            FontWeight="Bold"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            Visibility="Collapsed">
+            ⚠️ The text has been trimmed to the maximum allowable length of QR Codes.
+        </TextBlock>
+        <Image
+            Name="CodeImage"
+            Grid.Row="5"
+            Margin="0"
+            MouseLeftButtonDown="CodeImage_MouseLeftButtonDown" />
+    </Grid>
+</ui:FluentWindow>

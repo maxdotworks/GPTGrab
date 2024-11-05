@@ -1,0 +1,96 @@
+﻿<ui:FluentWindow
+    x:Class="Text_Grab.SettingsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Text_Grab.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Text_Grab"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Text_Grab.Pages"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Text Grab Settings"
+    Width="660"
+    Height="700"
+    MinWidth="200"
+    MinHeight="300"
+    d:Background="Black"
+    d:Height="600"
+    Closed="Window_Closed"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    Loaded="Window_Loaded"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ui:ImageIcon x:Key="TextGrabIcon" Source="/Text-Grab;component/Images/TealSelect40.png" />
+
+        <Style x:Key="labelText" TargetType="CheckBox">
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,16,0,0" />
+        </Style>
+
+        <Style x:Key="ShortCutTextBox" TargetType="TextBox">
+            <Setter Property="Width" Value="24" />
+            <Setter Property="Padding" Value="0,2" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+    </Window.Resources>
+    <Grid Background="{DynamicResource SolidBackgroundFillColorBaseBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ui:TitleBar
+            Title="Text Grab Settings"
+            Height="32"
+            Margin="2,2,2,0"
+            Padding="8,2"
+            Icon="{StaticResource TextGrabIcon}" />
+        <ui:NavigationView
+            x:Name="SettingsNavView"
+            Grid.Row="1"
+            IsBackButtonVisible="Collapsed"
+            PaneDisplayMode="LeftFluent">
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem
+                    Content="General"
+                    NavigationCacheMode="Enabled"
+                    TargetPageType="{x:Type pages:GeneralSettings}">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:SymbolIcon Symbol="Home24" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem
+                    Content="Langs"
+                    NavigationCacheMode="Enabled"
+                    TargetPageType="{x:Type pages:LanguageSettings}">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:SymbolIcon Symbol="LocalLanguage24" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem
+                    Content="Keys"
+                    NavigationCacheMode="Enabled"
+                    TargetPageType="{x:Type pages:KeysSettings}">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:SymbolIcon Symbol="DesktopKeyboard24" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem
+                    Content="Tess"
+                    NavigationCacheMode="Enabled"
+                    TargetPageType="{x:Type pages:TesseractSettings}">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:SymbolIcon Symbol="Globe24" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem
+                    Content="Danger"
+                    NavigationCacheMode="Enabled"
+                    TargetPageType="{x:Type pages:DangerSettings}">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:SymbolIcon Symbol="Warning24" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+            </ui:NavigationView.MenuItems>
+        </ui:NavigationView>
+    </Grid>
+</ui:FluentWindow>
