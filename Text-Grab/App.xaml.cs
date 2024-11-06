@@ -194,15 +194,6 @@ public partial class App : System.Windows.Application
         }
     }
 
-    private static void ShowAndSetFirstRun()
-    {
-        FirstRunWindow frw = new();
-        frw.Show();
-
-        _defaultSettings.FirstRun = false;
-        _defaultSettings.Save();
-    }
-
     private static async Task<bool> TryToOpenFile(string possiblePath, bool isQuiet)
     {
         if (!File.Exists(possiblePath))
