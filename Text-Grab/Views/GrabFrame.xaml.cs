@@ -2206,9 +2206,10 @@ new GrabFrameOperationArgs()
         }
 
         FrameText = stringBuilder.ToString();
-        SpeechSynthesizer synthesizer;
-        synthesizer = new SpeechSynthesizer();
-        synthesizer.SpeakAsync(FrameText);
+        //-DEBUG- FEATURE FOR READING FRAME TEXT OUT LOUD
+        //SpeechSynthesizer synthesizer;
+        //synthesizer = new SpeechSynthesizer();
+        //synthesizer.SpeakAsync(FrameText);
 
 
         if (IsFromEditWindow

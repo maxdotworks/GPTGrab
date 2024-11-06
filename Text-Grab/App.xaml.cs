@@ -262,13 +262,6 @@ public partial class App : System.Windows.Application
             return;
         }
 
-        if (_defaultSettings.FirstRun)
-        {
-            _defaultSettings.CorrectToLatin = LanguageUtilities.IsCurrentLanguageLatinBased();
-            ShowAndSetFirstRun();
-            return;
-        }
-
         DefaultLaunch();
     }
 
