@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using Text_Grab.Controls;
@@ -42,16 +43,20 @@ public partial class App : System.Windows.Application
 
     public static void DefaultLaunch()
     {
-        TextGrabMode defaultLaunchSetting = Enum.Parse<TextGrabMode>(_defaultSettings.DefaultLaunch, true);
+        TextGrabMode defaultLaunchSetting = TextGrabMode.GrabFrame;
 
         switch (defaultLaunchSetting)
         {
-            case TextGrabMode.Fullscreen:
-                WindowUtilities.LaunchFullScreenGrab();
-                break;
             case TextGrabMode.GrabFrame:
                 GrabFrame gf = new();
                 gf.Show();
+                var mousePosition = MouseUtilities.GetMousePosition();
+                gf.Left = mousePosition.X; 
+                gf.Top = mousePosition.Y;
+                gf.Width = 100;
+                break;
+            case TextGrabMode.Fullscreen:
+                WindowUtilities.LaunchFullScreenGrab();
                 break;
             case TextGrabMode.EditText:
                 EditTextWindow manipulateTextWindow = new();
