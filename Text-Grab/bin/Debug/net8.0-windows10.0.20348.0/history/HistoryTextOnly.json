@@ -1,0 +1,14 @@
+[
+  {
+    "CaptureDateTime": "2024-11-05T16:21:09.0670976-05:00",
+    "ID": "d4170935-6dd9-48c9-b4ac-aa57bd448ab3",
+    "ImagePath": "",
+    "IsTable": false,
+    "DpiScaleFactor": 1,
+    "LanguageTag": "en-US",
+    "SourceMode": 2,
+    "TextContent": "289\r\n290\r\n291\r\n292\r\n293\r\n294\r\n295\r\n296\r\n297\r\n298\r\n299\r\n300\r\n301\r\n302\r\n305\r\n306\r\n307\r\n308\r\n310\r\n311\r\n312\r\n313\r\nApplication . Current. Shutdown() ;\r\n2 references\r\npublic static boot GetMousePositionCout\r\nPoint mousePosition)\r\nXAML Live Preview is\r\nunavailable because either\r\nXAML Hot Reload is disabled,\r\napplication execution was\r\npaused before any windows\r\nwere created, or XAML Live\r\nPreview is not supported for\r\nyour application.\r\nif (GetCursorPos(out POINT point))\r\nmousePosition = new Point(point.X, point. Y);\r\nreturn true ;\r\nmousePosition = default;\r\nreturn false;\r\n1 reference\r\npublic static boot IsmouseInWindow(this\r\nWindow\r\nGetMousePosition(out Point mousePosition) ;\r\nDpiScaIe dpi = System.Windows.media.VisualTreeHelper.\r\nindo .GetAbsotutePosition() ;\r\nPoint absPosPoint =\r\nRect windowRect = new(absPosPoint.X, absPosPoint.Y,\r\nindow.ActuatWidth * dpi.DpiScaIeX,\r\nindow.ActuatHeight * dpi.DpiScaleY) ;\r\nreturn windowRect.Contains(mousePosition) ;\r\n1\r\nGetDl\r\n1\r\nDiagnostic\r\nAdd counte\r\nEvents\r\n11\r\nProcess\r\n100\r\nCPU c\u0027\r\n100\r\n0\r\nSummary\r\nEvents\r\nShow\r\nMemory l\u0027\r\nD Take:",
+    "WordBorderInfoJson": "",
+    "RectAsString": ""
+  }
+]

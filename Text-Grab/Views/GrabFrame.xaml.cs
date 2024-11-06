@@ -185,6 +185,7 @@ public partial class GrabFrame : Window
 
     private void StandardInitialize()
     {
+
         InitializeComponent();
         App.SetTheme();
 
