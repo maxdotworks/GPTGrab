@@ -10,5 +10,65 @@
     "TextContent": "289\r\n290\r\n291\r\n292\r\n293\r\n294\r\n295\r\n296\r\n297\r\n298\r\n299\r\n300\r\n301\r\n302\r\n305\r\n306\r\n307\r\n308\r\n310\r\n311\r\n312\r\n313\r\nApplication . Current. Shutdown() ;\r\n2 references\r\npublic static boot GetMousePositionCout\r\nPoint mousePosition)\r\nXAML Live Preview is\r\nunavailable because either\r\nXAML Hot Reload is disabled,\r\napplication execution was\r\npaused before any windows\r\nwere created, or XAML Live\r\nPreview is not supported for\r\nyour application.\r\nif (GetCursorPos(out POINT point))\r\nmousePosition = new Point(point.X, point. Y);\r\nreturn true ;\r\nmousePosition = default;\r\nreturn false;\r\n1 reference\r\npublic static boot IsmouseInWindow(this\r\nWindow\r\nGetMousePosition(out Point mousePosition) ;\r\nDpiScaIe dpi = System.Windows.media.VisualTreeHelper.\r\nindo .GetAbsotutePosition() ;\r\nPoint absPosPoint =\r\nRect windowRect = new(absPosPoint.X, absPosPoint.Y,\r\nindow.ActuatWidth * dpi.DpiScaIeX,\r\nindow.ActuatHeight * dpi.DpiScaleY) ;\r\nreturn windowRect.Contains(mousePosition) ;\r\n1\r\nGetDl\r\n1\r\nDiagnostic\r\nAdd counte\r\nEvents\r\n11\r\nProcess\r\n100\r\nCPU c\u0027\r\n100\r\n0\r\nSummary\r\nEvents\r\nShow\r\nMemory l\u0027\r\nD Take:",
     "WordBorderInfoJson": "",
     "RectAsString": ""
+  },
+  {
+    "CaptureDateTime": "2024-11-06T14:47:09.0340345-05:00",
+    "ID": "eb59b64a-84b4-4d92-8d85-289502c0d749",
+    "ImagePath": "",
+    "IsTable": false,
+    "DpiScaleFactor": 1,
+    "LanguageTag": "en-US",
+    "SourceMode": 2,
+    "TextContent": "Summary Events Counters\r\nShow Events (0 of 0)\r\nMemory Usage\r\nTake Snapshot\r\nCPU Usage\r\ne Record CPU Profile\r\nMemory Usage\r\nDebug\r\nws . Data\r\nws . Data\r\nws. Data\r\nws. Data\r\nError:\r\nError:\r\nError:\r\nError:\r\n4\r\n4\r\n4\r\n4\r\nCannot\r\nCannot\r\n. Cannot\r\nCannot\r\nfind\r\nfind\r\nfind\r\nfind\r\nsource\r\nsource\r\nsource\r\nsource\r\nfor\r\nfor\r\nfor\r\nbinding\r\nbinding\r\nbinding\r\nbinding\r\nwith\r\nwith\r\nwith\r\nwith\r\nreference\r\nreference\r\nreference",
+    "WordBorderInfoJson": "",
+    "RectAsString": ""
+  },
+  {
+    "CaptureDateTime": "2024-11-06T14:48:15.1736124-05:00",
+    "ID": "49c1ee1b-87ac-4fd8-8c81-463b377a03cb",
+    "ImagePath": "",
+    "IsTable": false,
+    "DpiScaleFactor": 1,
+    "LanguageTag": "en-US",
+    "SourceMode": 2,
+    "TextContent": "Dpi(this) ;\r\ndsAsTabIeCsetectec\r\nEvents\r\nShow Events (0 of 0)\r\nMemory Usage\r\nTake Snapshot\r\nCPU Usage\r\nRecord CPU Profile\r\n= null,\r\nr\r\n1026\r\nCh: 40\r\n1\r\nRouted\u00DC\r\nSPC LF\r\nOutput\r\nShow output from:\r\nDebug\r\nSystem. Windows. Data\r\nSystem. Windows. Data\r\nSystem. Windows. Data\r\nSystem. Windows. Data\r\nSystem. Windows. Data\r\nSystem. Windows. Data\r\nError:\r\nError:\r\nError:\r\nError:\r\nError:\r\nError:\r\n4\r\n4\r\n4\r\n4\r\n4\r\n4\r\n. Cannot\r\n. Cannot\r\n. Cannot\r\nCannot\r\nCannot\r\nCannot\r\nfind\r\nfind\r\nfind\r\nfind\r\nfind\r\nfind\r\nsource\r\nsource\r\nsource\r\nsource\r\nsource\r\nsource\r\nfor\r\nfor\r\nfor\r\nfor\r\nfor\r\nfor\r\nbinding\r\nbinding\r\nbinding\r\nbinding\r\nbinding\r\nbinding\r\nwith\r\nwith\r\nwith\r\nwith\r\nwith\r\nwith\r\nreference A\r\nreference\r\nreference\r\nreference",
+    "WordBorderInfoJson": "",
+    "RectAsString": ""
+  },
+  {
+    "CaptureDateTime": "2024-11-06T14:50:19.629609-05:00",
+    "ID": "5dd09ec9-d2e3-4fe5-94f0-4a37affbf814",
+    "ImagePath": "",
+    "IsTable": false,
+    "DpiScaleFactor": 1,
+    "LanguageTag": "en-US",
+    "SourceMode": 2,
+    "TextContent": "private void EditTextBTN\u2014CLickCobject? sender\r\n= null,\r\nif\r\nif\r\n(sender is ToggleButton toggleButton\r\n\u0026\u0026 toggleButton.IsChecked is false\r\n\u0026\u0026 destinationTextBox is not null)\r\ndestinationTextBox.SelectedText \u2014\r\ndestinationTextBox\r\n= null;\r\nreturn;\r\n(destinationTextBox\r\nis null)\r\n= WiridbwUf\u00E5tltles. OpenOrActxvateWil\r\netw\r\n428\r\nCPU (% of all processors)\r\n100\r\nSummary Events Counters\r\nEvents\r\nShow Events (0 of 0)\r\nMemory Usage\r\nD Take Snapshot\r\nCPU Usage\r\nRecord CPU Profile\r\nMemor\r\n223\r\n224\r\n225\r\n226\r\n227\r\n228\r\n229\r\n230\r\n231\r\n232\r\n233\r\n234\r\nPassedText\r\nPassedTextCont\r\nPassedTextCont\r\nPassedTextCont\r\ncancellationTokenF\r\nStopwatch stopwatc\r\nstopwatch. Start() ;\r\nMouse. OverrideCurs\r\nEditTextWindo X\r\nEditTextWindow.g.i.cs\r\nEditTextWindow.g.i.cs - (48, 26)\r\nEditTextWindow.xamLcs\r\nEditTextWindow.xamI.cs - (35,\r\n1",
+    "WordBorderInfoJson": "",
+    "RectAsString": ""
+  },
+  {
+    "CaptureDateTime": "2024-11-06T14:53:29.1136439-05:00",
+    "ID": "26cd2a31-2cc3-49e7-b118-ae86b7f31e24",
+    "ImagePath": "",
+    "IsTable": false,
+    "DpiScaleFactor": 1,
+    "LanguageTag": "en-US",
+    "SourceMode": 2,
+    "TextContent": "test",
+    "WordBorderInfoJson": "",
+    "RectAsString": ""
+  },
+  {
+    "CaptureDateTime": "2024-11-06T15:04:19.8151454-05:00",
+    "ID": "12395243-726c-4655-9755-8902c2aaf1c0",
+    "ImagePath": "",
+    "IsTable": false,
+    "DpiScaleFactor": 1,
+    "LanguageTag": "en-US",
+    "SourceMode": 2,
+    "TextContent": "1. An instrument store gives a 10% discount to all students off the original cost of\r\nan instrument. During a back to school sale an additional 15% is taken off the\r\ndiscounted price. Julie, a student at the local high school, purchases a flute for $306.\r\nHow much did it originally cost?\r\n1. 325\r\n2. 375\r\n3. 400\r\n4. 408",
+    "WordBorderInfoJson": "",
+    "RectAsString": ""
   }
 ]

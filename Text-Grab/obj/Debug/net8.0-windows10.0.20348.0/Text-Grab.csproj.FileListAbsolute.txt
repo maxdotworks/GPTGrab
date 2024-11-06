@@ -84,3 +84,5 @@ C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\obj\Debug\net8.0-windows10.0.203
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\obj\Debug\net8.0-windows10.0.20348.0\Text-Grab.pdb
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\obj\Debug\net8.0-windows10.0.20348.0\Text-Grab.genruntimeconfig.cache
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\obj\Debug\net8.0-windows10.0.20348.0\ref\Text-Grab.dll
+C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\bin\Debug\net8.0-windows10.0.20348.0\System.Speech.dll
+C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\bin\Debug\net8.0-windows10.0.20348.0\runtimes\win\lib\net8.0\System.Speech.dll

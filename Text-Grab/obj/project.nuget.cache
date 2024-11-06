@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zNFlMnZBHMQ=",
+  "dgSpecHash": "6uCCfspBldo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Xam\\Documents\\GitHub\\GPTGrab\\Text-Grab\\Text-Grab.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\Xam\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Xam\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Xam\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Xam\\.nuget\\packages\\system.speech\\8.0.0\\system.speech.8.0.0.nupkg.sha512",
     "C:\\Users\\Xam\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\Xam\\.nuget\\packages\\wpf-ui\\4.0.0-rc.2\\wpf-ui.4.0.0-rc.2.nupkg.sha512",
     "C:\\Users\\Xam\\.nuget\\packages\\wpf-ui.abstractions\\4.0.0-rc.2\\wpf-ui.abstractions.4.0.0-rc.2.nupkg.sha512",

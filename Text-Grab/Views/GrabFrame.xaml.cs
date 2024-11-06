@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
+using System.Speech;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -30,6 +32,7 @@ using Windows.Media.Ocr;
 using Windows.System;
 using ZXing;
 using ZXing.Windows.Compatibility;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Text_Grab.Views;
 
@@ -2203,12 +2206,17 @@ new GrabFrameOperationArgs()
         }
 
         FrameText = stringBuilder.ToString();
+        SpeechSynthesizer synthesizer;
+        synthesizer = new SpeechSynthesizer();
+        synthesizer.SpeakAsync(FrameText);
+
 
         if (IsFromEditWindow
             && destinationTextBox is not null
             && AlwaysUpdateEtwCheckBox.IsChecked is true
             && EditTextToggleButton.IsChecked is true)
         {
+            
             destinationTextBox.SelectedText = FrameText;
         }
     }
