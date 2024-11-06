@@ -49,12 +49,14 @@ public partial class App : System.Windows.Application
         {
             case TextGrabMode.GrabFrame:
                 // Set up global hook to wait for the Right Alt key press
-                var mousePosition = await GlobalKeyListener.WaitForRightAltPressAsync();
+                var mousePosition1 = await GlobalKeyListener.WaitForRightAltPressAsync();
+                var mousePosition2 = await GlobalKeyListener.WaitForRightAltPressAsync();
                 Console.WriteLine("Got past Async!");
                 // When Right Alt is pressed, show the GrabFrame at the cursor position
                 GrabFrame gf = new();
-                gf.Left = mousePosition.X;
-                gf.Top = mousePosition.Y;
+                gf.Left = mousePosition1.X;
+                gf.Top = mousePosition1.Y;
+                gf.Height = mousePosition2.Y;
                 gf.Show();
                 gf.IsFreezeMode = false;
                 break;

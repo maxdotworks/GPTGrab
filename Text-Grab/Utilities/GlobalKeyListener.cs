@@ -68,7 +68,7 @@ public class GlobalKeyListener
             // Check for Right Alt key or Ctrl + Alt (for AltGr)
             if (vkCode == VK_PAUSE)
             {
-                Debug.WriteLine("Right Alt (AltGr) key detected");
+                Debug.WriteLine("PAUSE key detected");
 
                 // Get the current cursor position
                 int x = Cursor.Position.X;
