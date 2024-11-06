@@ -41,19 +41,22 @@ public partial class App : System.Windows.Application
 
     #region Methods
 
-    public static void DefaultLaunch()
+    public static async void DefaultLaunch()
     {
         TextGrabMode defaultLaunchSetting = TextGrabMode.GrabFrame;
 
         switch (defaultLaunchSetting)
         {
             case TextGrabMode.GrabFrame:
+                // Set up global hook to wait for the Right Alt key press
+                var mousePosition = await GlobalKeyListener.WaitForRightAltPressAsync();
+                Console.WriteLine("Got past Async!");
+                // When Right Alt is pressed, show the GrabFrame at the cursor position
                 GrabFrame gf = new();
-                gf.Show();
-                var mousePosition = MouseUtilities.GetMousePosition();
-                gf.Left = mousePosition.X; 
+                gf.Left = mousePosition.X;
                 gf.Top = mousePosition.Y;
-                gf.Width = 100;
+                gf.Show();
+                gf.IsFreezeMode = false;
                 break;
             case TextGrabMode.Fullscreen:
                 WindowUtilities.LaunchFullScreenGrab();
@@ -72,6 +75,8 @@ public partial class App : System.Windows.Application
                 break;
         }
     }
+
+
     public static void SetTheme(object? sender = null, EventArgs? e = null)
     {
         bool gotTheme = Enum.TryParse(_defaultSettings.AppTheme.ToString(), true, out AppTheme currentAppTheme);
