@@ -1,3 +1,4 @@
 # Ignore Visual Studio specific files
 .vs/
 Text-Grab/bin/**
+Text-Grab/obj/Debug/
