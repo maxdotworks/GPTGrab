@@ -48,18 +48,21 @@ public partial class App : System.Windows.Application
         switch (defaultLaunchSetting)
         {
             case TextGrabMode.GrabFrame:
-                // Set up global hook to wait for the Right Alt key press
-                var mousePosition1 = await GlobalKeyListener.WaitForRightAltPressAsync();
-                var mousePosition2 = await GlobalKeyListener.WaitForRightAltPressAsync();
-                Console.WriteLine("Got past Async!");
-                // When Right Alt is pressed, show the GrabFrame at the cursor position
-                GrabFrame gf = new();
-                gf.Left = mousePosition1.X;
-                gf.Top = mousePosition1.Y - 37;
-                gf.Height = mousePosition2.Y-mousePosition1.Y + 37 + 44;
-                gf.Width = mousePosition2.X-mousePosition1.X;
-                gf.Show();
-                gf.IsFreezeMode = false;
+                while (true)
+                {
+                    // Set up global hook to wait for the Right Alt key press
+                    var mousePosition1 = await GlobalKeyListener.WaitForRightAltPressAsync();
+                    var mousePosition2 = await GlobalKeyListener.WaitForRightAltPressAsync();
+                    Console.WriteLine("Got past Async!");
+                    // When Right Alt is pressed, show the GrabFrame at the cursor position
+                    GrabFrame gf = new();
+                    gf.Left = mousePosition1.X;
+                    gf.Top = mousePosition1.Y - 37;
+                    gf.Height = mousePosition2.Y - mousePosition1.Y + 37 + 44;
+                    gf.Width = mousePosition2.X - mousePosition1.X;
+                    gf.IsFreezeMode = false;
+                    gf.Show();
+                }
                 break;
             case TextGrabMode.Fullscreen:
                 WindowUtilities.LaunchFullScreenGrab();

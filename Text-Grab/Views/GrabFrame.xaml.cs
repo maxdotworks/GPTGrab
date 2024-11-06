@@ -2206,10 +2206,20 @@ new GrabFrameOperationArgs()
         }
 
         FrameText = stringBuilder.ToString();
+        //-DEBUG- FEATURE FOR COPYING FRAME TEXT TO CLIPBOARD THEN HIDING
+        if(FrameText != null)
+        {
+            Clipboard.SetText(FrameText);
+            Debug.WriteLine("Copied FrameText: " + FrameText);
+            this.Hide();
+        }
+        //-END DEBUG-
+
         //-DEBUG- FEATURE FOR READING FRAME TEXT OUT LOUD
         //SpeechSynthesizer synthesizer;
         //synthesizer = new SpeechSynthesizer();
         //synthesizer.SpeakAsync(FrameText);
+        //-END DEBUG-
 
 
         if (IsFromEditWindow
