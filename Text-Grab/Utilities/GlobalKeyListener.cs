@@ -73,6 +73,8 @@ public class GlobalKeyListener
                 // Get the current cursor position
                 int x = Cursor.Position.X;
                 int y = Cursor.Position.Y;
+                Debug.WriteLine("X:" + x + " Y:" + y);
+
 
                 // Complete the task with the cursor position
                 _tcs.SetResult((x, y));

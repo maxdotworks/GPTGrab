@@ -55,8 +55,9 @@ public partial class App : System.Windows.Application
                 // When Right Alt is pressed, show the GrabFrame at the cursor position
                 GrabFrame gf = new();
                 gf.Left = mousePosition1.X;
-                gf.Top = mousePosition1.Y;
-                gf.Height = mousePosition2.Y;
+                gf.Top = mousePosition1.Y - 37;
+                gf.Height = mousePosition2.Y-mousePosition1.Y + 37 + 44;
+                gf.Width = mousePosition2.X-mousePosition1.X;
                 gf.Show();
                 gf.IsFreezeMode = false;
                 break;

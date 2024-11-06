@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     x:Name="GrabFrameWindow"
-    Title="Grab Frame"
+    Title="GPTGrab"
     Width="800"
     Height="450"
     MinWidth="150"
@@ -308,7 +308,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="13"
-                        Text="Grab Frame">
+                        Text="GPTGrab">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
                                 <Style.Triggers>
