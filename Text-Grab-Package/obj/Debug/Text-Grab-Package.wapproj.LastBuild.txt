@@ -74,6 +74,7 @@ C:\Users\Xam\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.20348.34\lib\net
 C:\Users\Xam\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.20348.34\lib\net6.0\WinRT.Runtime.dll
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\bin\Debug\net8.0-windows10.0.20348.0\Text-Grab.deps.json
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\obj\Debug\net8.0-windows10.0.20348.0\apphost.exe
+C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\Detective_icon-icons.com_54187.ico
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\bin\Debug\net8.0-windows10.0.20348.0\Text-Grab.runtimeconfig.json
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\bin\Debug\net8.0-windows10.0.20348.0\Text-Grab.dll
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\bin\Debug\net8.0-windows10.0.20348.0\Text-Grab.dll.config

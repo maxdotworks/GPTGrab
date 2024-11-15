@@ -7,7 +7,7 @@
 		<Nullable>enable</Nullable>
 		<UseWPF>true</UseWPF>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<ApplicationIcon>TealSelect.ico</ApplicationIcon>
+		<ApplicationIcon>Detective_icon-icons.com_54187.ico</ApplicationIcon>
 		<StartupObject>Text_Grab.App</StartupObject>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<Platforms>AnyCPU;x64;x86;ARM32;ARM64</Platforms>
@@ -30,6 +30,10 @@
 		<None Remove="Images\TealSelect40.png" />
 		<None Remove="Images\WinSym.png" />
 		<None Remove="TealSelect.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Detective_icon-icons.com_54187.ico" />
 	</ItemGroup>
 
 	<ItemGroup>

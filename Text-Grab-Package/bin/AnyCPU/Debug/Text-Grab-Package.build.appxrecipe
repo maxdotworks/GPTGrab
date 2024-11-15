@@ -303,6 +303,9 @@
     <AppxPackagedFile Include="C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\obj\Debug\net8.0-windows10.0.20348.0\apphost.exe">
       <PackagePath>Text-Grab\Text-Grab.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\Detective_icon-icons.com_54187.ico">
+      <PackagePath>Text-Grab\Detective_icon-icons.com_54187.ico</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab\bin\Debug\net8.0-windows10.0.20348.0\Text-Grab.runtimeconfig.json">
       <PackagePath>Text-Grab\Text-Grab.runtimeconfig.json</PackagePath>
     </AppxPackagedFile>

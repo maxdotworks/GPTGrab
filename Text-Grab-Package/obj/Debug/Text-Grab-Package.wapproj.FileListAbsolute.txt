@@ -47,3 +47,4 @@ C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab-Package\obj\Debug\qualifiers.txt
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab-Package\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab-Package\obj\Debug\ProjectArchitectures.txt
 C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab-Package\obj\Debug\Text-Grab-Package.wapproj.LastBuild.txt
+C:\Users\Xam\Documents\GitHub\GPTGrab\Text-Grab-Package\bin\AnyCPU\Debug\Text-Grab\Detective_icon-icons.com_54187.ico
